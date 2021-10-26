@@ -1,9 +1,9 @@
 
 var body = document.body,
-html = document.documentElement;
+    html = document.documentElement;
 
 var height = Math.max(body.scrollHeight, body.offsetHeight,
-html.clientHeight, html.scrollHeight, html.offsetHeight);
+    html.clientHeight, html.scrollHeight, html.offsetHeight);
 var canvas = document.getElementById("myCanvas");
 canvas.width = document.body.clientWidth; //document.width is obsolete
 canvas.height = height; //document.height is obsolete
@@ -14,34 +14,34 @@ grd.addColorStop(1, "black");
 
 
 function drawBall() {
-var x = Math.floor(Math.random() * document.body.clientWidth);
-var y = Math.floor(Math.random() * height);
-ctx.beginPath();
-ctx.arc(x, y, 1, 0, 2 * Math.PI);
-ctx.fillStyle = "#FFFFFF96";
-ctx.fill();
-ctx.closePath();
+    var x = Math.floor(Math.random() * document.body.clientWidth);
+    var y = Math.floor(Math.random() * height);
+    ctx.beginPath();
+    ctx.arc(x, y, 1, 0, 2 * Math.PI);
+    ctx.fillStyle = "#FFFFFF96";
+    ctx.fill();
+    ctx.closePath();
 }
 
 function draw() {
-ctx.fillStyle = grd;
-ctx.fillRect(0, 0, canvas.width, canvas.height);
-for (let i = 0; i < 1000; i++) {
-    drawBall();
-}
+    ctx.fillStyle = grd;
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    for (let i = 0; i < 1000; i++) {
+        drawBall();
+    }
 
 }
 // draw()
 setInterval(draw, 1000);
 
 var is_changed = false
-function change(){
-var parent = document.getElementById("description")
-var btn = document.getElementById("btn")
-if(!is_changed){
-    btn.innerHTML = "<"
-    parent.children[0].innerHTML = "History"
-    parent.children[2].innerHTML = `During an expedition of a research team in the Northern Lands of the Douluo Planet, they found a golden-silver patterned egg with Insulation of Soul Power of a Hundred Thousand years old spirit beast, during incubation time it hatched, and the level drop to less than ten years old, and a male baby got out from the egg. After hatching, he started to eat the shell of his own egg.
+function change() {
+    var parent = document.getElementById("description")
+    var btn = document.getElementById("btn")
+    if (!is_changed) {
+        btn.innerHTML = "<"
+        parent.children[0].innerHTML = "History"
+        parent.children[2].innerHTML = `During an expedition of a research team in the Northern Lands of the Douluo Planet, they found a golden-silver patterned egg with Insulation of Soul Power of a Hundred Thousand years old spirit beast, during incubation time it hatched, and the level drop to less than ten years old, and a male baby got out from the egg. After hatching, he started to eat the shell of his own egg.
 
     Captain pilot of the team, Lan Xiao and his wife, Nan Cheng returned to Tian Dou Planet together with the team and adopted son, Tang Xuanyu.
     
@@ -49,14 +49,16 @@ if(!is_changed){
     
     Xuanyu studied in Zi Luo Branch Soul Academy for one year and was recommended to advance into Elite Youth Class in Tian Luo Elementary Soul Academy because he was the top of the class (best combat ability and spiritual power), and he passed the entrance exam.`
 
-}else{
-    btn.innerHTML = ">"
-    parent.children[0].innerHTML = "Personality"
-    parent.children[2].innerHTML = `As a child, Xuanyu was described as being "too well mannered". He always did as told and was rather blunt and naive, openly stating how he feels to others. He was also blissfully unaware of all the strange things happening around him. Overall, unlike other Soul Land protagonists, who were forced to grow up quickly, Xuanyu was a genuine child.
+    } else {
+        btn.innerHTML = ">"
+        parent.children[0].innerHTML = "Personality"
+        parent.children[2].innerHTML = `As a child, Xuanyu was described as being "too well mannered". He always did as told and was rather blunt and naive, openly stating how he feels to others. He was also blissfully unaware of all the strange things happening around him. Overall, unlike other Soul Land protagonists, who were forced to grow up quickly, Xuanyu was a genuine child.
 
     However, after meeting Nana and training under her for a while, he matured at a rapid pace. He gained a calm sense towards battle and has shown genuine care for others. As he got older, he began displaying the qualities of a leader as well as being extremely sly and cunning. He also possesses business acumen and became the richest Shrek Student in his year.
     
     Later on he also showed both decisive and merciless streaks against his enemies.`
-}
-is_changed = !is_changed
+    }
+    is_changed = !is_changed
+    height = Math.max(body.scrollHeight, body.offsetHeight,html.clientHeight, html.scrollHeight, html.offsetHeight);
+    canvas.height = height; //document.height is obsolete
 }
