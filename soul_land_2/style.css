@@ -1,11 +1,13 @@
-body{
+body {
     margin: 0 auto;
     padding: 0;
 }
-#top{
+
+#top {
     position: absolute;
     width: 100vw;
 }
+
 main h1 {
     color: rgb(0, 190, 238);
     text-shadow: 0 0 10px rgb(0, 255, 234);
@@ -13,20 +15,21 @@ main h1 {
     text-align: center;
 }
 
-#content{
+#content {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
 }
 
-#character{
+#character {
     width: 30vw;
 }
 
-#character img{
+#character img {
     width: 100%;
 }
 
-#character h2{
+#character h2 {
     color: rgb(0, 190, 238);
     text-shadow: 0 0 10px rgb(0, 255, 234);
     font-size: 4vw;
@@ -44,12 +47,12 @@ main h1 {
     font-size: 2vw;
 }
 
-#description h2{
+#description h2 {
     color: rgb(0, 190, 238);
     text-shadow: 0 0 10px rgb(0, 255, 234);
 }
 
-#description button{
+#description button {
     font-size: 10vw;
     width: 10%;
     margin-left: auto;
@@ -57,4 +60,14 @@ main h1 {
     border: none;
     color: rgb(0, 190, 238);
     text-shadow: 0 0 10px rgb(0, 255, 234);
+}
+
+@media (max-width:500px) {
+
+    #character {
+        width: 70vw;
+    }
+    #description {
+        width: 60vw;
+    }
 }
