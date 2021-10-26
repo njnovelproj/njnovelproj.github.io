@@ -1,0 +1,45 @@
+body{
+    margin: 0 auto;
+    padding: 0;
+}
+
+#top{
+    position: absolute;
+    width: 100vw;
+}
+main h1 {
+    color: rgb(0, 190, 238);
+    text-shadow: 0 0 10px rgb(0, 255, 234);
+    font-size: 10vw;
+    text-align: center;
+}
+
+.novels {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.novel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+}
+
+.novel img {
+    width: 20vw;
+}
+
+.novel a {
+    text-decoration: none;
+    color: black;
+    position: absolute;
+    display: none;
+    font-size: 10vw;
+}
+
+canvas{
+    width: 100vw;
+    height: 100%;
+}
